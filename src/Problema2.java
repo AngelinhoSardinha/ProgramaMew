@@ -13,6 +13,10 @@ public class Problema2 {
             else {
                 System.out.println(anyo);
             }
+            /*
+            int anyo = sc.nextInt();
+            System.out.println(anyo < 0 ? anyo : anyo - 1);
+             */
         }
     }
 }
