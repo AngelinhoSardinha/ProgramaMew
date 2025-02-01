@@ -1,8 +1,10 @@
+import java.util.Scanner;
+
 import java.util.ArrayList;
 import java.util.*;
 
 public class Problema4 {
-    static void main(String[] args){
+    public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
         int numeroCasos = scan.nextInt();
 
@@ -14,44 +16,70 @@ public class Problema4 {
             int treboles = 0;
             int diamantes = 0;
 
-            for(int j = 0; j < 13; j++){
+            for(int j = 0; j < 26; j++){
                 listaCartas.add(scan.next());
-                scan.next();
             }
 
             for(int x = 0; x < listaCartas.size(); x++){
-                if(listaCartas.get(x) == "J"){
+                if(Objects.equals(listaCartas.get(x), "J")){
                     puntos++;
                 }
-                else if(listaCartas.get(x) == "D"){
+                else if(Objects.equals(listaCartas.get(x), "D")){
                     diamantes++;
                 }
-                else if(listaCartas.get(x) == "C"){
+                else if(Objects.equals(listaCartas.get(x), "C")){
                     corazones++;
                 }
-                else if(listaCartas.get(x) == "T"){
+                else if(Objects.equals(listaCartas.get(x), "T")){
                     treboles++;
                 }
-                else if(listaCartas.get(x) == "P"){
+                else if(Objects.equals(listaCartas.get(x), "P")){
                     picas++;
                 }
-                else if(listaCartas.get(x) == "Q"){
+                else if(Objects.equals(listaCartas.get(x), "Q")){
                     puntos += 2;
                 }
-                else if(listaCartas.get(x) == "K"){
+                else if(Objects.equals(listaCartas.get(x), "K")){
                     puntos += 3;
                 }
-                else if(listaCartas.get(x) == "A"){
+                else if(Objects.equals(listaCartas.get(x), "A")){
                     puntos += 4;
                 }
             }
-            if(corazones == 1 || treboles == 1 || diamantes == 1 || picas == 1){
+            if(corazones == 1){
                 puntos += 2;
             }
-            else if(corazones == 2 || treboles == 2 || diamantes == 2 || picas == 2){
+            else if(diamantes == 1){
+                puntos += 2;
+            }
+            else if(picas == 2){
+                puntos += 2;
+            }
+            else if(treboles == 2){
+                puntos += 2;
+            }
+            else if(corazones == 2){
                 puntos += 1;
             }
-            else if(corazones == 0 || treboles == 0 || diamantes == 0 || picas == 0){
+            else if(treboles == 2){
+                puntos += 1;
+            }
+            else if(diamantes == 2){
+                puntos += 1;
+            }
+            else if(picas == 2){
+                puntos += 1;
+            }
+            else if(corazones == 0){
+                puntos += 3;
+            }
+            else if(picas == 0){
+                puntos += 3;
+            }
+            else if(diamantes == 0){
+                puntos += 3;
+            }
+            else if(treboles == 0){
                 puntos += 3;
             }
             System.out.println(puntos);
