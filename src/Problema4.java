@@ -46,41 +46,61 @@ public class Problema4 {
                     puntos += 4;
                 }
             }
-            if(corazones == 1){
-                puntos += 2;
+            switch (diamantes) {
+                case 0:
+                    puntos += 3;
+                    break;
+                case 1:
+                    puntos += 2;
+                    break;
+                case 2:
+                    puntos += 1;
+                    break;
+                default:
+                    puntos = puntos;
+
             }
-            else if(diamantes == 1){
-                puntos += 2;
+            switch (picas) {
+                case 0:
+                    puntos += 3;
+                    break;
+                case 1:
+                    puntos += 2;
+                    break;
+                case 2:
+                    puntos += 1;
+                    break;
+                default:
+                    puntos = puntos;
+
             }
-            else if(picas == 2){
-                puntos += 2;
+            switch (corazones) {
+                case 0:
+                    puntos += 3;
+                    break;
+                case 1:
+                    puntos += 2;
+                    break;
+                case 2:
+                    puntos += 1;
+                    break;
+                default:
+                    puntos = puntos;
+
             }
-            else if(treboles == 2){
-                puntos += 2;
-            }
-            else if(corazones == 2){
-                puntos += 1;
-            }
-            else if(treboles == 2){
-                puntos += 1;
-            }
-            else if(diamantes == 2){
-                puntos += 1;
-            }
-            else if(picas == 2){
-                puntos += 1;
-            }
-            else if(corazones == 0){
-                puntos += 3;
-            }
-            else if(picas == 0){
-                puntos += 3;
-            }
-            else if(diamantes == 0){
-                puntos += 3;
-            }
-            else if(treboles == 0){
-                puntos += 3;
+            switch (treboles) {
+                case 0:
+                    puntos += 3;
+                    break;
+                case 1:
+                    puntos += 2;
+                    break;
+                case 2:
+                    puntos += 1;
+                    break;
+                default:
+                    puntos = puntos;
+
             }
             System.out.println(puntos);
         }
