@@ -30,30 +30,3 @@ public class Problemas5 {
             for (int i = 0; i < C; i++) {
                 total += preciosCompe[i];
             }
-
-            for (int i = 0; i < T; i++) {
-                total += preciosTencia[i];
-            }
-
-            int indexC = C;
-            int indexT = T;
-
-            for (int i = 0; i < N - (C + T); i++) {
-                if (indexC < N && indexT < N) {
-                    if (preciosCompe[indexC] < preciosTencia[indexT]) {
-                        total += preciosCompe[indexC];
-                        indexC++;
-                    } else {
-                        total += preciosTencia[indexT];
-                        indexT++;
-                    }
-                }
-            }
-
-            System.out.println(total);
-
-            N = scanner.nextInt();
-        }
-        scanner.close();
-    }
-}
