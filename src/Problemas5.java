@@ -18,6 +18,7 @@ public class Problemas5 {
                 preciosCompe[i] = scanner.nextInt();
             }
 
+
             for (int i = 0; i < N; i++) {
                 preciosTencia[i] = scanner.nextInt();
             }
